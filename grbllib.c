@@ -427,7 +427,7 @@ int grbl_enter (void)
 
         sys.var5399 = -2;                                        // Clear last M66 result
         sys.override.feed_rate = DEFAULT_FEED_OVERRIDE;          // Set to 100%
-        sys.override.rapid_rate = DEFAULT_RAPID_OVERRIDE;        // Set to 100%
+        sys.override.rapid_rate = RAPID_OVERRIDE_LOW;            // Set to 25%
         do {
             if(spindle_is_enabled(--spindle_num))
                 spindle_get(spindle_num)->param->override_pct = DEFAULT_SPINDLE_RPM_OVERRIDE; // Set to 100%
